@@ -7,7 +7,7 @@ class CartController extends AppController{
 // 	var $cart;
 
 	public function cartlist(){
-		public $name = "Cart";
+// 		public $name = "Cart";
 
 		$cart = new Cart();
 		$cart->setGoodsId('510');
@@ -24,6 +24,8 @@ class CartController extends AppController{
 		$cart->setAmount('10');
 		array_push($arr_cart, $cart);
 		$_SESSION['carts']=$arr_cart;
+
+		$this->set( "cart", $cart );
 	}
 }
 ?>
