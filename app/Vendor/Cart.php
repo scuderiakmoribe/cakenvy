@@ -1,6 +1,7 @@
 <?php
-class Cart extends AppModel{
-
+// App::uses( 'AppModel', 'Model' );
+class Cart extends Object{
+	public $useTable = false;
 	var $name = "Cart";
 
 	var $order_id;
